@@ -47,6 +47,7 @@ const DummyPage = (): JSX.Element => {
 
   return (
     <ListingPage
+      filters={<></>}
       listing={
         <Listing
           columnConfiguration={configuration}
