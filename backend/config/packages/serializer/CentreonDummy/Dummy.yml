@@ -1,0 +1,14 @@
+CentreonDummy\Domain\Dummy:
+  properties:
+    id:
+      type: int
+      groups:
+        - 'dummy_main'
+    name:
+      type: string
+      groups:
+        - 'dummy_main'
+    description:
+      type: string
+      groups:
+        - 'dummy_main'

@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import axios from 'axios';
+
 import { makeStyles } from '@material-ui/core';
 import DescriptionIcon from '@material-ui/icons/DescriptionOutlined';
 
@@ -16,10 +18,18 @@ const useStyles = makeStyles(() => ({
 export default (): JSX.Element => {
   const classes = useStyles();
 
+  const [counter, setCounter] = React.useState(0);
+
+  React.useEffect(() => {
+    axios.get('./api/v21.04/dummy/dummies').then(({ data }) => {
+      setCounter(data.meta.total);
+    });
+  }, []);
+
   return (
     <div className={classes.wrapper}>
       <DescriptionIcon fontSize="large" style={{ color: 'white' }} />
-      <IconNumber iconType="colored" iconColor="green" iconNumber={10} />
+      <IconNumber iconType="colored" iconColor="green" iconNumber={counter} />
     </div>
   );
 };

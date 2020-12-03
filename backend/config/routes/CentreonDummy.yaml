@@ -1,6 +1,6 @@
-autodiscovery:
+dummy:
     prefix: "/{base_uri}api/{version}"
-    resource: '../../www/modules/centreon-autodiscovery-server/routes/CentreonAutoDiscovery.yaml'
+    resource: '../../www/modules/dummy/routes/CentreonDummy.yaml'
     defaults:
         base_uri: "centreon/"
     requirements:

@@ -19,5 +19,14 @@ CREATE TABLE IF NOT EXISTS `mod_dummy_objects` (
    PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
-INSERT INTO `mod_dummy_objects` (`name`, `description`)
-VALUES ('object1', 'description of object 1');
+INSERT INTO `mod_dummy_objects` (`name`, `description`) VALUES
+('object1', 'description of object 1'),
+('object2', 'description of object 2'),
+('object3', 'description of object 3'),
+('object4', 'description of object 4'),
+('object5', 'description of object 5'),
+('object6', 'description of object 6'),
+('object7', 'description of object 7'),
+('object8', 'description of object 8'),
+('object9', 'description of object 9'),
+('object10', 'description of object 10');

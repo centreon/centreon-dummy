@@ -1,5 +1,7 @@
 import React from 'react';
 
+import axios from 'axios';
+
 import {
   ListingPage,
   Listing,
@@ -34,27 +36,26 @@ const configuration = [
   },
 ];
 
-const tenElements = new Array(10).fill(0);
+const DummyPage = (): JSX.Element => {
+  const [dummies, setDummies] = React.useState([]);
 
-const listing = [...tenElements].map((_, index) => ({
-  id: index,
-  name: `E${index}`,
-  description: `Entity ${index}`,
-  active: index % 2 === 0,
-  selected: index % 3 === 0,
-  disableCheckbox: index % 4 === 0,
-}));
+  React.useEffect(() => {
+    axios.get('./api/v21.04/dummy/dummies').then(({ data }) => {
+      setDummies(data.result);
+    });
+  }, []);
 
-const DummyPage = (): JSX.Element => (
-  <ListingPage
-    listing={
-      <Listing
-        columnConfiguration={configuration}
-        totalRows={listing.length}
-        tableData={listing}
-      />
-    }
-  />
-);
+  return (
+    <ListingPage
+      listing={
+        <Listing
+          columnConfiguration={configuration}
+          totalRows={dummies.length}
+          tableData={dummies}
+        />
+      }
+    />
+  );
+}
 
 export default DummyPage;
