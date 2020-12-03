@@ -1,0 +1,6 @@
+# backend development files
+vendor/
+
+# frontend development files
+frontend/node_modules
+www/modules/dummy/static

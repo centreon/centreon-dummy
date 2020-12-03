@@ -1,0 +1,9 @@
+CentreonAutoDiscovery\Domain\Job\JobParameter:
+  custom_accessor_order: [name, group, description, value, is_hidden, is_locked, is_mandatory]
+  properties:
+    group:
+      type: string
+      groups: [param_main]
+    value:
+      type: string
+      groups: [param_main]

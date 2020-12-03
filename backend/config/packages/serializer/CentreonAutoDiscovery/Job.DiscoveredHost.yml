@@ -1,0 +1,11 @@
+CentreonAutoDiscovery\Domain\Job\DiscoveredHost:
+  properties:
+    id:
+      type: integer
+      groups: [discovered_host_min]
+    jobId:
+      type: integer
+      groups: [discovered_host_min]
+    discoveryResult:
+      type: array
+      groups: [discovered_host_min]

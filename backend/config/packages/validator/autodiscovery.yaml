@@ -1,0 +1,76 @@
+CentreonAutoDiscovery\Domain\Job\Job:
+  Collection:
+    - Type:
+        - type: CentreonAutoDiscovery\Domain\Credential\CredentialParameter
+        - groups: [Default]
+
+CentreonAutoDiscovery\Domain\Credential\CredentialParameter:
+  properties:
+    name:
+      - Type:
+          type: string
+      - NotNull:
+          groups: [parameter_add, parameter_update]
+    value:
+      - Type:
+          type: string
+          groups: [parameter_add, parameter_update]
+
+CentreonAutoDiscovery\Domain\Credential\Credential:
+  properties:
+    name:
+      - Type:
+          type: string
+      - NotNull:
+          groups: [credential_add, credential_update]
+    parameters:
+      - All:
+          - Type:
+              type: CentreonAutoDiscovery\Domain\Credential\CredentialParameter
+      - Valid: ~
+
+mapper_parameter:
+  properties:
+    source:
+      - Type:
+          type: string
+          groups: [simulation_mapper]
+    destination:
+      - Type:
+          type: string
+          groups: [simulation_mapper]
+    conditions:
+      properties:
+        source:
+          - Type:
+              type: string
+              groups: [simulation_mapper]
+        value:
+          - Type:
+              type: string
+              groups: [simulation_mapper]
+        operator:
+          - Type:
+              type: string
+              groups: [simulation_mapper]
+
+simulation_mapper:
+  properties:
+    credential_id:
+      - Type:
+          type: string
+    provider_id:
+      - Type:
+          type: string
+      - NotNull: ~
+    mappers:
+      properties:
+        - Type:
+          - type: string
+            groups: [simulation_mapper]
+        - Parameters:
+          - All:
+              - Type:
+                  type: mapper_parameter
+          - Valid: ~
+

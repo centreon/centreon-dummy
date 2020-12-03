@@ -1,0 +1,27 @@
+jms_serializer:
+  metadata:
+    directories:
+      CentreonAutoDiscovery:
+        namespace_prefix: "CentreonAutoDiscovery\\Domain"
+        path: '%kernel.root_dir%/../config/packages/serializer/CentreonAutoDiscovery'
+
+services:
+  _defaults:
+    public: false
+    autowire: true      # Automatically injects dependencies in your services.
+    autoconfigure: true # Automatically registers your services as commands, event subscribers, controller...
+
+  CentreonAutoDiscovery\:
+    resource: '../../../src/CentreonAutoDiscovery/*'
+    exclude:
+      - '../../../src/CentreonAutoDiscovery/Application/Webservice'
+      - '../../../src/CentreonAutoDiscovery/Domain/Service'
+      - '../../../src/CentreonAutoDiscovery/Infrastructure/Repository'
+
+  CentreonAutoDiscovery\Domain\Job\Interfaces\JobServiceInterface:
+    class: CentreonAutoDiscovery\Domain\Job\JobService
+    public: true
+    calls:
+      - [setCentreonPath, ['%centreon_path%']]
+
+

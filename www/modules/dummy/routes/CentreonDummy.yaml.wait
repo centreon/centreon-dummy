@@ -1,0 +1,5 @@
+dummy.providers.findObjects:
+  methods: GET
+  path: /dummy/objects
+  controller: 'CentreonDummy\Application\Controller\DummyController::findObjects'
+  condition: "request.attributes.get('version') >= 20.10"

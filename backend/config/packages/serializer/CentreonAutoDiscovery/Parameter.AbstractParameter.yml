@@ -1,0 +1,17 @@
+CentreonAutoDiscovery\Domain\Parameter\AbstractParameter:
+  properties:
+    name:
+      type: string
+      groups: [param_main]
+    description:
+      type: string
+      groups: [param_main]
+    isHidden:
+      type: boolean
+      groups: [param_main]
+    isLocked:
+      type: boolean
+      groups: [param_main]
+    isMandatory:
+      type: boolean
+      groups: [param_main]

@@ -1,0 +1,10 @@
+CentreonAutoDiscovery\Domain\Provider\ProviderType:
+  properties:
+    id:
+      type: integer
+      groups:
+        - 'provider_type_main'
+    name:
+      type: string
+      groups:
+        - 'provider_type_main'
