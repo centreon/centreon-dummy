@@ -2,12 +2,34 @@
 
 A dummy module in order to explain how to create your own module
 
+## Quick Start :rocket:
+
+```shell
+cp -R www/modules/dummy /usr/share/centreon/www/dummy
+chown -R apache. /usr/share/centreon/www/dummy
+
+cp -R backend/config /usr/share/centreon/config
+cp -R backend/src /usr/share/centreon/src
+su - apache -s /bin/bash -c "/usr/share/centreon/bin/console cache:clear"
+
+cd frontend
+npm install # or npm install --legacy-peer-deps if you are using nodejs 14
+npm run build
+rm -rf /usr/share/centreon/www/modules/dummy/static
+cp -R www/modules/dummy/static /usr/share/centreon/www/modules/dummy/static
+```
+
+Then, go to the Centreon UI in `Administration > Extensions > Manager` and install the dummy extension.
+
+A new counter will appear in the top bar, and a new menu is accessible in `Home > Dummy Menu Entry`
+
 ## Installation :pick:
 
 Currently, Centreon modules are stored in `/usr/share/centreon/www/modules/<module_name>`.
 So, to use this dummy module, copy the module folder in the proper folder :
 ```shell
 cp -R www/modules/dummy /usr/share/centreon/www/dummy
+chown -R apache. /usr/share/centreon/www/dummy
 ```
 
 Module configuration can be updated in `www/modules/dummy/conf.php`.
@@ -81,6 +103,7 @@ The framework which is used is Symfony. Please refer to the [documentation](http
   > :warning: routes are linked to the file `www/modules/dummy/routes/CentreonDummy.yaml`
   >
   > during module installation, content of `www/modules/dummy/routes/CentreonDummy.yaml.wait` is copied to `www/modules/dummy/routes/CentreonDummy.yaml` in order to add the new routes to the configuration
+
 Backend configuration files must be copied to `/usr/share/centreon/config`.
 
 > :warning: when configuration files are updated on Centreon server, it is mandatory to reload symfony cache :
@@ -92,4 +115,5 @@ Backend configuration files must be copied to `/usr/share/centreon/config`.
 * controllers which are the entrypoints of the api : `backend/src/CentreonDummy/Application/Controller/DummyController.php`
 * services which are called by the controller and contain the business logic : `backend/src/CentreonDummy/Domain/*`
 * repositories which interact with external components like the database : `backend/src/CentreonDummy/Infrastructure/DummyRepositoryRDB.php`
+
 Backend source files must be copied to `/usr/share/centreon/src`.
