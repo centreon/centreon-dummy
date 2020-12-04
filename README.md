@@ -13,7 +13,7 @@ cp -R backend/src /usr/share/centreon/src
 su - apache -s /bin/bash -c "/usr/share/centreon/bin/console cache:clear"
 
 cd frontend
-npm install # or npm install --legacy-peer-deps if you are using nodejs 14
+npm install # or npm install --legacy-peer-deps if you are using npm v7
 npm run build
 rm -rf /usr/share/centreon/www/modules/dummy/static
 cp -R www/modules/dummy/static /usr/share/centreon/www/modules/dummy/static
@@ -54,7 +54,7 @@ Dependencies can be installed using following command :
 ```shell
 npm install
 ```
-> :warning: **If you are using nodejs 14**, use `npm install --legacy-peer-deps`
+> :warning: **If you are using npm v7**, use `npm install --legacy-peer-deps`
 
 Frontend components can be built using following command :
 ```shell
