@@ -48,6 +48,7 @@ If you need to do advanced manipulation during module installation or deletion, 
 ## Frontend :sparkles:
 
 Frontend code is stored in `frontend` folder.
+  > :memo: if you are not familiar with typescript, it is possible to develop using javascript
 
 Dependencies can be installed using following command :
 ```shell
@@ -63,6 +64,12 @@ npm run build
 There are two concepts in Centreon to integrate module frontend :
 * **Page**
 * **Hook**
+
+Each of those concepts corresponds to a React component.
+Centreon Web will load dynamically those components using [systemjs](https://github.com/systemjs/systemjs).
+
+You can include your own dependencies in package.json and use it in your components.
+There are no limitation, cause your react component will be managed as a totally separated bundle.
 
 ### Page :page_facing_up:
 
