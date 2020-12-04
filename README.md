@@ -83,6 +83,8 @@ An example is given here : https://github.com/centreon/centreon-dummy/blob/maste
 * **topology_url** : route url (ex: /home/dummy)
 * **topology_url_opt** : optional query parameters (not especially used)
 
+![Listing](/doc/images/listing.png)
+
 ### Hook :magnet:
 
 A hook is used to integrate a react component in a specific location of centreon-web.
@@ -90,6 +92,8 @@ Currently, the only available location is the top counter.
 
 To do this, you need to build a js file inside following directory : `/usr/share/centreon/www/modules/dummy/static/hooks/header/topCounter/`
 webpack file contains already a configuration to build a hook : https://github.com/centreon/centreon-dummy/blob/master/frontend/webpack.config.js#L17
+
+![Top Counter](/doc/images/top_counter.png)
 
 ## Backend :gear:
 
