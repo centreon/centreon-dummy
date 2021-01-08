@@ -5,8 +5,8 @@ A dummy module in order to explain how to create your own module
 ## Quick Start :rocket:
 
 ```shell
-cp -R www/modules/dummy /usr/share/centreon/www/dummy
-chown -R apache. /usr/share/centreon/www/dummy
+cp -R www/modules/dummy /usr/share/centreon/www/modules/dummy
+chown -R apache. /usr/share/centreon/www/modules/dummy
 
 cp -R backend/config /usr/share/centreon/config
 cp -R backend/src /usr/share/centreon/src
@@ -28,8 +28,8 @@ A new counter will appear in the top bar, and a new menu is accessible in `Home 
 Currently, Centreon modules are stored in `/usr/share/centreon/www/modules/<module_name>`.
 So, to use this dummy module, copy the module folder in the proper folder :
 ```shell
-cp -R www/modules/dummy /usr/share/centreon/www/dummy
-chown -R apache. /usr/share/centreon/www/dummy
+cp -R www/modules/dummy /usr/share/centreon/www/modules/dummy
+chown -R apache. /usr/share/centreon/www/modules/dummy
 ```
 
 Module configuration can be updated in `www/modules/dummy/conf.php`.
