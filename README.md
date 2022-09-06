@@ -5,8 +5,8 @@ A dummy module in order to explain how to create your own module
 ## Quick Start :rocket:
 
 ```shell
-cp -R www/modules/dummy /usr/share/centreon/www/dummy
-chown -R apache. /usr/share/centreon/www/dummy
+cp -R www/modules/dummy /usr/share/centreon/www/modules/dummy
+chown -R apache. /usr/share/centreon/www/modules/dummy
 
 cp -R backend/config /usr/share/centreon/config
 cp -R backend/src /usr/share/centreon/src
@@ -44,21 +44,27 @@ If you need to do advanced manipulation during module installation or deletion, 
 * **www/modules/dummy/php/install.php**
 * **www/modules/dummy/php/uninstall.php**
 
-
 ## Frontend :sparkles:
 
-Frontend code is stored in `frontend` folder.
-  > :memo: if you are not familiar with typescript, it is possible to develop using javascript
+Frontend code is stored in `www/modules/dummy/react` folder.
+  > :memo: You have to install NodeJS 16
 
 Dependencies can be installed using following command :
 ```shell
-npm install
+npm ci
+# or
+npm ci --legacy-peer-deps
 ```
-> :warning: **If you are using npm v7**, use `npm install --legacy-peer-deps`
 
 Frontend components can be built using following command :
 ```shell
-npm run build
+npm run build # production build
+npm run start:dev # development build with watch mode
+```
+
+Don't forget to run ESLint
+```shell
+npm run eslint:fix
 ```
 
 There are two concepts in Centreon to integrate module frontend :

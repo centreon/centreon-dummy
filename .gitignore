@@ -2,5 +2,5 @@
 vendor/
 
 # frontend development files
-frontend/node_modules
+www/modules/dummy/react/node_modules
 www/modules/dummy/static
