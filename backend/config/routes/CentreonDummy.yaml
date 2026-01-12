@@ -1,7 +1,0 @@
-dummy:
-    prefix: "/{base_uri}api/{version}"
-    resource: '../../www/modules/dummy/routes/CentreonDummy.yaml'
-    defaults:
-        base_uri: "centreon/"
-    requirements:
-        base_uri: "(.+/)|.{0}"

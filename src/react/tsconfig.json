@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@centreon/js-config/tsconfig/index",
+  "compilerOptions": {
+    "jsx": "react",
+    "module": "esnext",
+    "baseUrl": "."
+  },
+  "include": ["."],
+  "exclude": []
+}

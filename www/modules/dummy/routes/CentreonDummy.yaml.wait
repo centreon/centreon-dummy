@@ -1,5 +1,0 @@
-dummy.findDummies:
-  methods: GET
-  path: /dummy/dummies
-  controller: 'CentreonDummy\Application\Controller\DummyController::findDummies'
-  condition: "request.attributes.get('version') >= 20.10"
