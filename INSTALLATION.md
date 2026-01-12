@@ -17,15 +17,14 @@ You first need to build the react frontend code.
 
 For that you can go to the [src/react](src/react) folder and run the following commands
 
-- `pnpm run eslint`
-- `pnpm run build`
-  - You can also use the command `pnpm run build:dev` to integrate dev components like sourcemaps
+- `pnpm lint`
+- `pnpm build`
 
 Those commands will generate the `/src/static` folder containing the federated module
 
 ## Package
 
-You now need to package your application within a folder with the name of the module (here centreon-bootstrap-module)
+You now need to package your application within a folder with the name of the module (here centreon-dummy)
 that should contain the content of the src directory (with the built dependencies).
 
 ## Deploy
