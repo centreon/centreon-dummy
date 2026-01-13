@@ -1,9 +1,9 @@
-#!/bin/env bash
+#!/usr/bin/env bash
 # Will create an archive to extract on the centreon server
 
 # Globals
 ROOT_DIR=$(realpath "$(dirname "$0")/..")
-BUILD_DEV=${BUILD_DEV:=1}
+BUILD_DEV=${BUILD_DEV:=0}
 # Module name must not contains slashes
 MODULE_NAME=centreon-bootstrap-module
 
@@ -29,16 +29,11 @@ if ! pnpm install; then
     fatal_error "Installing dependencies failed"
 fi
 
-echo run eslint
-if ! pnpm run eslint; then
-    fatal_error "Lint failed"
-fi
-
 echo run build
-build_command="pnpm run build"
+build_command="pnpm build"
 if ((BUILD_DEV == 1)); then
     echo "warn: building in dev mode"
-    build_command="pnpm run build:dev"
+    build_command="pnpm build:dev"
 fi
 if ! $build_command; then
     fatal_error "Unable to build react"

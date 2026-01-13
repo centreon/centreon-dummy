@@ -35,6 +35,7 @@
     "use-resize-observer": "^9.1.0"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
     "@centreon/js-config": "25.11.0",
     "@rspack/cli": "^1.6.0",
     "@rspack/core": "^1.6.0",
