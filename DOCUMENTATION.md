@@ -36,9 +36,6 @@ The upgrade scripts are executed when the centreon central is being upgraded, as
 
 > This process is not described in this module. You can read more at [Centreon Docs - Create a module - Upgrade](https://docs.centreon.com/docs/developer/developer-module/)
 
-### PHP Pages
-The PHP pages are static PHP files that are made available to the frontend user. Once placed on the system, they need to be described on within the centreon database **topology** table so an ID can refer to a specific PHP file.
-
 ### React Pages
 The React pages are **microfrontend federated modules** that are exposed to be loaded within the Centreon application.
 
