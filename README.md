@@ -1,26 +1,18 @@
-# Centreon Module Bootstrap
+# Centreon Dummy
 
 This module is a bootstrap project to kickstart a new module for Centreon.
 
 This is based on the new structures of front pages based on react and the @ui centreon library.
 
-## Origin
-
-This project is based on the old [centreon-dummy](https://github.com/centreon-archive/centreon-dummy) project and the old official documentation at [Centreon docs - How to write a module](https://docs.centreon.com/docs/developer/developer-module/)
-
 ## Presentation
 
-This module is a "Bootstrap Module", it can be installed through the "Extension Manager" once installed on your centreon server.
+This module is a "Centreon Dummy Module", it can be installed through the "Extension Manager" once installed on your centreon server.
 
-It will add Two pages in your application.
+It will add a page "React Example" in your application.
 
-### Php Example
-Available on the "Home" menu, under "PHP Exemple"
 
-This will demonstrate how to integrate a **PHP** file within the centreon interface to execute local PHP code
-
-### React Example
-Available on the "Settings" menu, under "React Example"
+### Example
+Available on the "Homme" menu, under "React Example"  /home/react-example
 
 This will demonstrate how to integrate **React Javascript** code within the centeon interface and connect it to the local centreon **APIs**
 
