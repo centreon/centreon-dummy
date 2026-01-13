@@ -26,7 +26,7 @@ module.exports = (enableCoverage = false) => {
           './reactExample': './pages/reactExample/index'
         }
       },
-      moduleName: 'centreonModuleBootstrap',
+      moduleName: 'centreonDummyModule',
       postCssBase: './'
     }),
     moduleConfiguration,

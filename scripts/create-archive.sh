@@ -5,7 +5,7 @@
 ROOT_DIR=$(realpath "$(dirname "$0")/..")
 BUILD_DEV=${BUILD_DEV:=0}
 # Module name must not contains slashes
-MODULE_NAME=centreon-bootstrap-module
+MODULE_NAME=centreon-dummy
 
 # Functions
 

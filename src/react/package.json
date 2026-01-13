@@ -1,7 +1,7 @@
 {
-  "name": "centreon-bootstrap-module",
+  "name": "centreon-dummy",
   "version": "26.01.0",
-  "description": "Centreon Module Bootstrap ",
+  "description": "Centreon Dummy",
   "scripts": {
     "build": "rspack build -c ./rspack.config.js",
     "build:dev": "rspack build -m development -c ./rspack.config.dev.js",

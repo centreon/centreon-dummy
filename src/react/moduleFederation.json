@@ -5,6 +5,6 @@
       "route": "/home/react-example"
     }
   ],
-  "moduleFederationName": "centreonModuleBootstrap",
-  "moduleName": "centreon-bootstrap-module"
+  "moduleFederationName": "centreonDummyModule",
+  "moduleName": "centreon-dummy"
 }
