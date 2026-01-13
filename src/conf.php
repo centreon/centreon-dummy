@@ -17,7 +17,7 @@ $module_conf[$moduleName] = [
     // Allow your module to be uninstalled
     'is_removeable' => '1',
     // Module author's name
-    'author' => "Michelin",
+    'author' => "Centreon",
     // Stability of module.
     'stability' => 'unstable',
     // Last time module was updated.
