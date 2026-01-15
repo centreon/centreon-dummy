@@ -9,7 +9,7 @@
     "lint": "biome check .",
     "lint:fix": "pnpm lint --fix"
   },
-  "author": "Michelin",
+  "author": "Centreon",
   "license": "Apache-2.0",
   "dependencies": {
     "@centreon/ui": "25.6.10",
