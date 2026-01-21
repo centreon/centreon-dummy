@@ -1,0 +1,10 @@
+{
+  "federatedPages": [
+    {
+      "component": "./reactExample",
+      "route": "/home/react-example"
+    }
+  ],
+  "moduleFederationName": "centreonDummyModule",
+  "moduleName": "centreon-dummy"
+}

@@ -1,6 +1,3 @@
-# backend development files
-vendor/
-
-# frontend development files
-www/modules/dummy/react/node_modules
-www/modules/dummy/static
+src/react/node_modules
+src/static
+.DS_Store

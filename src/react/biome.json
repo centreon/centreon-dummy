@@ -1,0 +1,7 @@
+{
+    "extends": ["./node_modules/@centreon/js-config/biome/base.json"],
+    "files": {
+      "ignore": []
+    }
+  }
+  
