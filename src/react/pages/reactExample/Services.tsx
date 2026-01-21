@@ -77,14 +77,12 @@ export default function HostListing() {
           limit={limit}
           paginated={true}
           onPaginate={(page) => {
-            // Avoid reset of value to incompatible level
             if (page <= 0) {
               page = 1;
             }
             setPage(page);
           }}
           onLimitChange={(limit) => {
-            // Avoid reset of value to incompatible level
             if (limit <= 0) {
               limit = 1;
             }

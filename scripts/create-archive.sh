@@ -49,14 +49,12 @@ echo Create archive within the module name folder
 archive_name="$MODULE_NAME"
 archive_name="$archive_name".tar.gz
 
-# We have to use the transform to place every file in the proper folder as it is sensitive for some files
 transform_query='s,^,'"$MODULE_NAME"'/,'
 if ! tar -c -z \
     -f "$archive_name" \
     -C src \
     --transform="$transform_query" \
         php \
-        php_pages \
         sql \
         static \
         upgrade \
