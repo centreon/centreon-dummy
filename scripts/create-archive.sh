@@ -25,7 +25,11 @@ if ! cd "$ROOT_DIR"/src/react; then
 fi
 
 echo install dependencies
-if ! pnpm install; then
+if ! pnpm install \
+    --frozen-lockfile \
+    --config.trustPolicy=no-downgrade \
+    --config.minimumReleaseAge=2880 \
+    --config.blockExoticSubdeps=true; then
     fatal_error "Installing dependencies failed"
 fi
 
